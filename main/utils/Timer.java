@@ -1,7 +1,5 @@
 package main.utils;
 
-import java.util.concurrent.TimeUnit;
-
 public class Timer {
 
     /**

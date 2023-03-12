@@ -1,12 +1,8 @@
 package main.producers;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 import main.SandwichManager;
 import main.models.Bread;
 import main.models.Egg;
-import main.utils.Printer;
 import main.utils.Timer;
 
 public class SandwichPacker {

@@ -14,7 +14,7 @@ import main.producers.SandwichPacker;
 public class Printer {
 
     private static Object lock = new Object();
-
+    
     /**
      * Append string to new line in log file
      * 

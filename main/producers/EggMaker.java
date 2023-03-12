@@ -2,7 +2,6 @@ package main.producers;
 
 import main.SandwichManager;
 import main.models.Egg;
-import main.utils.Printer;
 import main.utils.Timer;
 
 public class EggMaker {

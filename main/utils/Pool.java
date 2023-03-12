@@ -3,7 +3,6 @@ package main.utils;
 import main.SandwichManager;
 import main.models.Bread;
 import main.models.Egg;
-import main.producers.SandwichPacker;
 
 public class Pool<T> {
     
@@ -24,14 +23,12 @@ public class Pool<T> {
         this.numMade = 0;
     }
 
-    public int getSize() {
-        return size;
-    }
-    
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
+    /**
+     * Adds in a new food item made by a Maker into the circular queue if it has capacity still and the
+     * required amount of the particular food isn't reached
+     * 
+     * @param food Type of food in the Pool (Bread / Egg)
+     */
     public synchronized void put(T food) {
 
         // Check if pool is full
@@ -60,6 +57,11 @@ public class Pool<T> {
         this.notifyAll();
     }
 
+    /**
+     * Removes food from the circular queue if it is not empty
+     * 
+     * @return Food of type Bread / Egg in the circular queue in FIFO manner
+     */
     public synchronized T get() {
 
         // Check if pool is empty
